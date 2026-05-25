@@ -1,0 +1,31 @@
+CREATE DATABASE IF NOT EXISTS monexamen;
+USE monexamen;
+
+CREATE TABLE IF NOT EXISTS etudiant (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    promotion VARCHAR(20) NOT NULL,
+    departement VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS livre (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS interrogation (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(50) NOT NULL,
+    promotion VARCHAR(20) NOT NULL,
+    departement VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS examen (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(50) NOT NULL,
+    promotion VARCHAR(20) NOT NULL,
+    departement VARCHAR(50) NOT NULL
+);
